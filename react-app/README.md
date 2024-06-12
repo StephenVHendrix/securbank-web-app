@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Retrieve Cloud Manager credentials for local web app development. Before you can run the SecurBank app, you will need Cloud Manager credentials to connect the app to Cloud Manager.
 
-## Available Scripts
+1. **Access Developer Console:**
+   - From the Overview tab in Cloud Manager, tap or click the ellipsis button next to the environment name and select **Developer Console**.
 
-In the project directory, you can run:
+2. **Generate Local Development Token:**
+   - In the Developer Console, select the **Integrations** tab then the **Local Token** tab and tap or click **Get Local Development Token**.
+   - A JSON file is produced with the access token. Copy only the token itself (the remaining JSON is not necessary) to a secure location for use in a future step before closing the Developer Console and returning to Cloud Manager.
 
-### `npm start`
+3. **Copy Environment URL:**
+   - Back in Cloud Manager, on the Overview tab, right-click the URL of the environment to copy it and save it in a secure location for use in a future step.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. **Update .env.local File:**
+   - Make the following changes to a copy of the `.env` file named `.env.local` and save the changes:
+     - For `REACT_APP_HOST_URI`, paste the value of the previously copied URL of your environment.
+     - For `REACT_APP_DEV_TOKEN`, paste the value of the previously copied local development token.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. **Run the SecurBank Web App:**
+   - With everything set up both in Cloud Manager and locally, you can run the SecurBank web app.
+   - At the command line of your local machine, navigate to the `react-app` folder of the SecurBank app project you downloaded and decompressed.
+   - In your `react-app` folder, install the SecurBank app with the `npm -i` command.
+   - Once installed, start the SecurBank app with the `npm start` command.
