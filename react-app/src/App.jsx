@@ -6,6 +6,7 @@ import Header from "./components/structure/Header.jsx";
 import Home from "./pages/Home.jsx";
 import Articles from "./pages/Articles.jsx";
 import Services from "./pages/Services.jsx";
+import Service from "./pages/Service.jsx";
 import ArticleDetail from "./pages/ArticleDetail.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import { getURI } from "./utils";
@@ -34,6 +35,7 @@ function App() {
               <Route path="/articles/:slug" element={<ArticleDetail />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/:slug" element={<Services />} />
+              <Route path="/service" element={<Service />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
           </main>
